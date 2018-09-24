@@ -23,3 +23,7 @@
 
 # binary
 metapod
+
+# vendor dir
+vendor/
+
