@@ -27,3 +27,5 @@ metapod
 # vendor dir
 vendor/
 
+# ide project files
+.idea/
