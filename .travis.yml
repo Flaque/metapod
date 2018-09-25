@@ -1,3 +1,7 @@
-language: go
-go:
-  - "1.11"
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build ./api --build-arg app_env=production
