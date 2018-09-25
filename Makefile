@@ -1,12 +1,13 @@
-PKGS := $(shell go list ./... | grep -v vendor)
-
-build: test
-	go build
+build:
+	docker-compose build
 
 .PHONY: run
 run: build
-	@metapod
+	docker-compose up
 
-.PHONY: test
+prod:
+	docker build ./db
+	docker build ./api --build-arg app_env=production
+
 test:
-	go test $(PKGS)
+	docker build ./api --build-arg app_env=test

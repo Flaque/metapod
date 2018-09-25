@@ -8,28 +8,36 @@ An _experimental_ (Read: not-usable or in anyway done) distributed podcasting pl
 
 Getting started:
 
-Install the vendor dependencies using godep. (https://github.com/golang/dep)
+We use [fresh](https://github.com/pilu/fresh) for hot code reloading with docker-compose.
 
-```sh
-dep ensure
-```
-
-Building a binary:
+Building docker-compose for development:
 
 ```sh
 make
 ```
 
-Building and then running that binary:
+Building and then running docker-compose:
 
 ```sh
 make run
+```
+
+Building docker containers for production:
+
+```sh
+make prod
 ```
 
 Running tests:
 
 ```sh
 make test
+```
+
+If you wish to run this locally without docker-composel install the vendor dependencies using godep. (https://github.com/golang/dep)
+
+```sh
+dep ensure
 ```
 
 ## Learning about ActivityPub

@@ -21,8 +21,16 @@
 .DS_Store
 *.swp
 
-# binary
+#pilu/fresh
+tmp
+
+#binary
+api
 metapod
+
+#postgres
+pgdata
+
 
 # vendor dir
 vendor/
