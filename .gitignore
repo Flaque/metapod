@@ -21,8 +21,15 @@
 .DS_Store
 *.swp
 
-#docker-composer
+#pilu/fresh
 tmp
+
+#binary
+api
+metapod
+
+#postgres
+pgdata
 
 
 # vendor dir

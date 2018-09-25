@@ -26,7 +26,17 @@ Building docker containers for production:
 make prod
 ```
 
-Tests are run as part of the build process.
+Running tests:
+
+```sh
+make test
+```
+
+If you wish to run this locally without docker-composel install the vendor dependencies using godep. (https://github.com/golang/dep)
+
+```sh
+dep ensure
+```
 
 ## Learning about ActivityPub
 

@@ -18,7 +18,10 @@ RUN dep ensure
 RUN go get ./
 RUN go build
 
-RUN go test $(go list ./... | grep -v vendor)
+RUN if [ ${APP_ENV} = test ]; \
+	then \
+	go test $(go list ./... | grep -v vendor); \
+	fi
 
 # if dev setting will use pilu/fresh for code reloading via docker-compose volume sharing with local machine
 # if production setting will build binary
